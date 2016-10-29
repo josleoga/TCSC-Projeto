@@ -2,7 +2,8 @@
 #include <stdlib.h>
 int main(void){
     
-    double a=0, b=0, op, res;
+    double a=0, b=0, res;
+    int op;
     
     printf("Informe Numero A: ");
      scanf("%lf", &a);
@@ -11,25 +12,25 @@ int main(void){
      
     printf("\n\nEscolha uma das opcoes");
     printf("\n1:Somar \n2:Dividir \n3:Multiplicar \n4:Subtrair \n\n");
-     scanf("%lf", &op);
+     scanf("%d", &op);
     
     printf("\n\n");
     
-    switch(op>0){
+    switch(op){
                case 1: res = a + b;
                     printf("Resultado da Soma eh: %0.0lf + %0.0lf = %0.2lf\n\n", a, b , res);
                     break;
-               case 2: res = a / b;
-                    printf("O valo da divisao :%0.2lf", res);
+               case 2: if(a != 0 || b != 0){
+                    res = a / b;
+                        printf("O valo da divisao :%0.2lf", res);
+                    }
+                    else                        
+                        printf(" Nao eh possivel dividir por 0!");
                     break;
                     
-               case 3: if(a != 0 || b != 0){               
-                        res = a * b;
-                        print("O Resultado da multiplicacao eh: %0.1f", res);
-                        }
-                        else                        
-                        printf(" Nao eh possivel dividir por 0!")                        
-                        break;
+               case 3: res = a * b;
+                       print("O Resultado da multiplicacao eh: %0.1f", res);                       
+                       break;
                }
     
     system("Pause");
