@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(void){
+    
+    double a, b, res;
+    int op;
+    
+    do{
+        printf("Informe Numero A: ");
+         scanf("%lf", &a);
+        printf("Informe Numero B: ");
+         scanf("%lf", &b);
+         
+         printf("\n\nEscolha uma das opcoes");
+         printf("\n1:Somar \n2:Dividir \n3:Multiplicar \n4:Subtrair \n0:Sair \n\n");
+          scanf("%d", &op);
+    
+          printf("\n\n");
+          
+    switch(op){
+               case 1: res = a + b;
+                    printf("Resultado da Soma eh: %0.0lf + %0.0lf = %0.2lf\n\n", a, b , res);
+                    break;
+               case 2: if(a != 0 || b != 0) {
+                    res = a / b;
+                    printf("O valo da divisao :%0.2lf\n\n", res);
+                    }
+                    else                        
+                    printf("Nao eh possivel dividir por 0!\n\n");
+                    break;
+               case 3: res = a * b;
+                       printf("O Resultado da multiplicacao eh: %0.1f\n\n", res);                       
+                       break;
+               case 4: res = a - b;
+                     printf("Resultado da Subtração eh: %0.0lf + %0.0lf = %0.2lf\n\n", a, b , res);
+                     break;
+               default:if(op>4)
+                       printf("Opcao nao encontrada\n\n");
+               }      
+               }while(op>0);
+    
+    system("Pause");
+}
