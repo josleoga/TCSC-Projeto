@@ -19,8 +19,8 @@ int main(void){
                case 1: res = a + b;
                     printf("Resultado da Soma eh: %0.0lf + %0.0lf = %0.2lf\n\n", a, b , res);
                     break;
-               case 2: res = a / a;
-                    printf("O valo da divisao :%0.2lf", res);
+               case 2: res = a / b;
+                    printf("O resultado da divisao :%0.2lf", res);
                     break;
                }
     
