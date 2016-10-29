@@ -23,9 +23,13 @@ int main(void){
                     printf("O valo da divisao :%0.2lf", res);
                     break;
                     
-               case 3: res = a * b;
-                    print("O Resultado da multiplicacao eh: %0.1f", res);
-                    break;
+               case 3: if(a != 0 || b != 0){               
+                        res = a * b;
+                        print("O Resultado da multiplicacao eh: %0.1f", res);
+                        }
+                        else                        
+                        printf(" Nao eh possivel dividir por 0!")                        
+                        break;
                }
     
     system("Pause");
